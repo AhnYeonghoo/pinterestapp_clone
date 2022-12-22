@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap4_css %}
+
+
+{% block content %}
+
+<div style='text-align: center; max-width: 500px; margin:4rem auto;'>
+    <div>
+        <h4>Login</h4>
+    </div>
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% comment %} {{ form }} {% endcomment %}
+            <input type="submit" class='btn btn-dark rounded-pill col-6 mt-3'>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
