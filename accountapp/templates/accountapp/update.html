@@ -6,10 +6,10 @@
 
 {% block content %}
     <div style="mb-4">
-        <h4>SignUp</h4>
+        <h4>Change Info</h4>
     </div>
     <div style='text-align:center; max-width:500px; margin: 4rem auto; '>
-        <form action="{% url 'accountapp:create' %}" method="POST" >
+        <form action="{% url 'accountapp:update' pk=user.pk %}" method="POST" >
             {% csrf_token %}
             {% comment %} {% bootstrap4_form form %} {% endcomment %}
             {{ form }}

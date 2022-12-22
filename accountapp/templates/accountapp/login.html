@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+{% comment %} {% load static %}
 {% load bootstrap4 %}
-{% bootstrap4_css %}
+{% bootstrap4_css %} {% endcomment %}
 
 
 {% block content %}
@@ -13,8 +13,8 @@
     <div>
         <form action="" method="POST">
             {% csrf_token %}
-            {% bootstrap_form form %}
-            {% comment %} {{ form }} {% endcomment %}
+            {% comment %} {% bootstrap_form form %} {% endcomment %}
+            {{ form }}
             <input type="submit" class='btn btn-dark rounded-pill col-6 mt-3'>
         </form>
     </div>
